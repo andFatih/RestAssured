@@ -139,20 +139,7 @@ public class CountryTest {
         ;
     }
 
-    @Test(dependsOnMethods = "deleteById")
-    public void deleteByIdNegative() {
 
-        given()
-                .cookies(cookies)
-                .pathParam("countryId", countryId)
-                .when()
-                .delete("/school-service/api/countries/{countryId}")
-
-                .then()
-                .statusCode(404)
-                .log().body()
-        ;
-    }
 
 }
 
